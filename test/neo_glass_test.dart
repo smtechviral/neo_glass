@@ -1,12 +1,14 @@
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:neo_glass/neo_glass.dart';
+import 'package:neo_glass/src/enums.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
+  test('NeoGlassEffect enum has all values', () {
+    expect(NeoGlassEffect.values.length, 6);
+    expect(NeoGlassEffect.values, contains(NeoGlassEffect.morphism));
+    expect(NeoGlassEffect.values, contains(NeoGlassEffect.holographic));
+    expect(NeoGlassEffect.values, contains(NeoGlassEffect.plasma));
+    expect(NeoGlassEffect.values, contains(NeoGlassEffect.crystal));
+    expect(NeoGlassEffect.values, contains(NeoGlassEffect.aurora));
+    expect(NeoGlassEffect.values, contains(NeoGlassEffect.quantum));
   });
 }
