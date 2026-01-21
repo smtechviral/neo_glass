@@ -1,8 +1,10 @@
 import 'dart:math' as math;
 import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:neo_glass/src/painters/aurora_painter.dart';
+import 'package:neo_glass/src/painters/crystal_painter.dart';
+import 'package:neo_glass/src/painters/plasma_painter.dart';
+import 'package:neo_glass/src/painters/quantum_painter.dart';
 
 import 'enums.dart';
 
@@ -418,154 +420,7 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
   }
 }
 
-// ============= CUSTOM PAINTERS =============
 
-class PlasmaPainter extends CustomPainter {
-  final double animation;
-  final double intensity;
-  final Color color;
 
-  PlasmaPainter({
-    required this.animation,
-    required this.intensity,
-    required this.color,
-  });
 
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()..style = PaintingStyle.fill;
 
-    for (int i = 0; i < 5; i++) {
-      final offset = Offset(
-        size.width / 2 +
-            math.cos(animation * 2 * math.pi + i) * size.width * 0.3,
-        size.height / 2 +
-            math.sin(animation * 2 * math.pi + i) * size.height * 0.3,
-      );
-
-      paint.shader = RadialGradient(
-        colors: [
-          color.withOpacity(0.4 * intensity),
-          color.withOpacity(0.2 * intensity),
-          Colors.transparent,
-        ],
-      ).createShader(Rect.fromCircle(center: offset, radius: size.width * 0.4));
-
-      canvas.drawCircle(offset, size.width * 0.4, paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(PlasmaPainter oldDelegate) => true;
-}
-
-class CrystalPainter extends CustomPainter {
-  final double animation;
-  final double intensity;
-
-  CrystalPainter({required this.animation, required this.intensity});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.5;
-
-    // Draw crystal facets
-    for (int i = 0; i < 8; i++) {
-      final angle = (i / 8) * 2 * math.pi + animation * 2 * math.pi;
-      final startX = size.width / 2 + math.cos(angle) * size.width * 0.3;
-      final startY = size.height / 2 + math.sin(angle) * size.height * 0.3;
-      final endX =
-          size.width / 2 + math.cos(angle + math.pi) * size.width * 0.2;
-      final endY =
-          size.height / 2 + math.sin(angle + math.pi) * size.height * 0.2;
-
-      paint.color = Colors.white.withOpacity(0.3 * intensity);
-      canvas.drawLine(Offset(startX, startY), Offset(endX, endY), paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(CrystalPainter oldDelegate) => true;
-}
-
-class AuroraPainter extends CustomPainter {
-  final double animation;
-  final List<Color> colors;
-
-  AuroraPainter({required this.animation, required this.colors});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()..style = PaintingStyle.fill;
-
-    for (int i = 0; i < 3; i++) {
-      final path = Path();
-      path.moveTo(0, size.height * 0.3);
-
-      for (double x = 0; x <= size.width; x += 10) {
-        final y = size.height * 0.3 +
-            math.sin((x / size.width + animation + i * 0.3) * 4 * math.pi) *
-                size.height *
-                0.15;
-        path.lineTo(x, y);
-      }
-
-      path.lineTo(size.width, size.height);
-      path.lineTo(0, size.height);
-      path.close();
-
-      paint.shader = LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [
-          colors[i % colors.length].withOpacity(0.4),
-          Colors.transparent,
-        ],
-      ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
-
-      canvas.drawPath(path, paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(AuroraPainter oldDelegate) => true;
-}
-
-class QuantumPainter extends CustomPainter {
-  final double animation;
-  final Color color;
-
-  QuantumPainter({required this.animation, required this.color});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()..style = PaintingStyle.fill;
-
-    // Draw quantum particles
-    for (int i = 0; i < 20; i++) {
-      final x = (math.cos(animation * 2 * math.pi + i * 0.3) * 0.5 + 0.5) *
-          size.width;
-      final y = (math.sin(animation * 2 * math.pi + i * 0.5) * 0.5 + 0.5) *
-          size.height;
-      final radius = 2 + math.sin(animation * 4 * math.pi + i) * 1.5;
-
-      paint.color = color.withOpacity(0.6);
-      canvas.drawCircle(Offset(x, y), radius, paint);
-
-      // Glow effect
-      paint.shader = RadialGradient(
-        colors: [
-          color.withOpacity(0.3),
-          Colors.transparent,
-        ],
-      ).createShader(Rect.fromCircle(center: Offset(x, y), radius: radius * 3));
-      canvas.drawCircle(Offset(x, y), radius * 3, paint);
-      paint.shader = null;
-    }
-  }
-
-  @override
-  bool shouldRepaint(QuantumPainter oldDelegate) => true;
-}
