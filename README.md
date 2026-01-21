@@ -135,7 +135,7 @@ This project is [MIT](LICENSE) licensed.
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@ysmtechviral](https://github.com/smtechviral)
+- GitHub: [@smtechviral](https://github.com/smtechviral)
 
 ## ⭐ Show your support
 
