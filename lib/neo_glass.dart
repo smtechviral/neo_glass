@@ -55,7 +55,7 @@ class GlassShowcaseScreen extends StatelessWidget {
                   'Next-gen glass morphism',
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.white.withValues(alpha:0.7),
                   ),
                 ),
                 const SizedBox(height: 40),
@@ -144,7 +144,7 @@ class GlassShowcaseScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.2),
+              color: color.withValues(alpha:0.2),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Icon(icon, color: Colors.white, size: 32),
@@ -167,7 +167,7 @@ class GlassShowcaseScreen extends StatelessWidget {
                   subtitle,
                   style: TextStyle(
                     fontSize: 14,
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.white.withValues(alpha:0.7),
                   ),
                 ),
               ],

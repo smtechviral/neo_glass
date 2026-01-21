@@ -17,12 +17,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
-
-# Topics help users discover your package
-topics:
-  - glassmorphism
-  - glass-effect
-  - ui
-  - design
-  - animation
-  - widgets

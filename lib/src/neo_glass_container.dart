@@ -272,7 +272,7 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
             filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.1),
+                color: Colors.white.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(widget.borderRadius),
               ),
             ),
@@ -343,7 +343,7 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Colors.white.withOpacity(0.1),
+                    Colors.white.withValues(alpha: 0.3),
                     Colors.white.withOpacity(0.05),
                   ],
                 ),
