@@ -28,7 +28,7 @@ A revolutionary Flutter package featuring 6 unique glassmorphism effects that do
 Add this to your package's `pubspec.yaml` file:
 ```yaml
 dependencies:
-  neo_glass: ^1.0.1
+  neo_glass: ^1.0.1+2
 ```
 
 Then run:
