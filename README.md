@@ -4,7 +4,7 @@
 
 A full runnable example app is available on GitHub:
 
-👉 **[View example/lib/main.dart](https://github.com/smtechviral/neo_glass/blob/main/example/lib/main.dart)**
+👉 **[example/lib/main.dart](https://github.com/smtechviral/neo_glass/blob/main/example/lib/main.dart)**
 
 This example demonstrates all 6 Neo Glass effects with animations and configurations.
 
