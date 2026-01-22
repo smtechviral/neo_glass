@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:neo_glass/src/enums.dart';
+import 'package:neo_glass/neo_glass.dart';
 
 void main() {
   test('NeoGlassEffect enum has all values', () {

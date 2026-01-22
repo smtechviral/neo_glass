@@ -1,6 +1,6 @@
 name: neo_glass
 description: A revolutionary Flutter glassmorphism package with 6 unique effects - Liquid Morphism, Holographic, Plasma, Crystal, Aurora, and Quantum blur effects.
-version: 1.0.1
+version: 1.0.1+1
 homepage: https://github.com/smtechviral/neo_glass
 repository: https://github.com/smtechviral/neo_glass
 issue_tracker: https://github.com/smtechviral/neo_glass/issues
@@ -17,3 +17,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+
+
+screenshots:
+  - description: 'All 6 glass effects showcase'
+    path: screenshots/neo_glass_grid.png
+  - description: 'Detailed view with descriptions'
+    path: screenshots/neo_glass_detailed.png
