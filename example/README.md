@@ -1,7 +1,12 @@
 # Neo Glass Example
 
-This example demonstrates all 6 revolutionary glass effects available in the neo_glass package.
+## 📘 Complete Example
 
+A full runnable example app is available on GitHub:
+
+👉 **[example/lib/main.dart](https://github.com/smtechviral/neo_glass/blob/main/example/lib/main.dart)**
+
+This example demonstrates all 6 Neo Glass effects with animations and configurations.
 ## Running the example
 ```bash
 cd example
