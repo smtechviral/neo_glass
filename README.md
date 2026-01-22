@@ -1,5 +1,14 @@
 # Neo Glass 🌟
 
+## 📘 Complete Example
+
+A full runnable example app is available on GitHub:
+
+👉 **[View example/lib/main.dart](https://github.com/smtechviral/neo_glass/blob/main/example/lib/main.dart)**
+
+This example demonstrates all 6 Neo Glass effects with animations and configurations.
+
+
 A revolutionary Flutter package featuring 6 unique glassmorphism effects that don't exist in any other package.
 
 [![pub package](https://img.shields.io/pub/v/neo_glass.svg)](https://pub.dev/packages/neo_glass)
@@ -100,6 +109,15 @@ NeoGlassContainer(
   child: YourWidget(),
 )
 ```
+
+## 📸 Visual Preview
+
+### All 6 Glass Effects
+![Neo Glass Effects Grid](screenshots/neo_glass_grid.png)
+
+### Detailed Effect Overview
+![Neo Glass Detailed](screenshots/neo_glass_detailed.png)
+
 
 ## 🎯 Properties
 
