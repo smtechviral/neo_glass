@@ -1,6 +1,6 @@
 name: neo_glass_example
 description: Example app showcasing 6 revolutionary glassmorphism effects - Liquid Morphism, Holographic, Plasma, Crystal, Aurora, and Quantum blur.
-version: 1.0.0+2
+version: 1.0.0+3
 publish_to: 'none'
 
 environment:
