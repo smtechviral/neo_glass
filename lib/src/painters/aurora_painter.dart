@@ -32,7 +32,7 @@ class AuroraPainter extends CustomPainter {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         colors: [
-          colors[i % colors.length].withOpacity(0.4),
+          colors[i % colors.length].withValues(alpha:0.4),
           Colors.transparent,
         ],
       ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));

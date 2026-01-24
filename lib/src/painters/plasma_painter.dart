@@ -28,8 +28,8 @@ class PlasmaPainter extends CustomPainter {
 
       paint.shader = RadialGradient(
         colors: [
-          color.withOpacity(0.4 * intensity),
-          color.withOpacity(0.2 * intensity),
+          color.withValues(alpha: 0.4 * intensity),
+          color.withValues(alpha: 0.2 * intensity),
           Colors.transparent,
         ],
       ).createShader(Rect.fromCircle(center: offset, radius: size.width * 0.4));

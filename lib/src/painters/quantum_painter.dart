@@ -21,13 +21,13 @@ class QuantumPainter extends CustomPainter {
           size.height;
       final radius = 2 + math.sin(animation * 4 * math.pi + i) * 1.5;
 
-      paint.color = color.withOpacity(0.6);
+      paint.color = color.withValues(alpha:0.6);
       canvas.drawCircle(Offset(x, y), radius, paint);
 
       // Glow effect
       paint.shader = RadialGradient(
         colors: [
-          color.withOpacity(0.3),
+          color.withValues(alpha:0.3),
           Colors.transparent,
         ],
       ).createShader(Rect.fromCircle(center: Offset(x, y), radius: radius * 3));

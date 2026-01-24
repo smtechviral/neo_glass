@@ -8,20 +8,59 @@ import 'package:neo_glass/src/painters/quantum_painter.dart';
 
 import 'enums.dart';
 
+/// A container widget that applies stunning glassmorphism effects.
+///
+/// Supports six different effect styles: morphism, holographic, plasma,
+/// crystal, aurora, and quantum. Each effect can be customized with
+/// intensity, colors, and animation settings.
+///
+/// Example:
+/// ```dart
+/// NeoGlassContainer(
+///   effect: NeoGlassEffect.morphism,
+///   accentColor: Colors.blue,
+///   intensity: 1.0,
+///   child: Text('Hello World'),
+/// )
+/// ```
 class NeoGlassContainer extends StatefulWidget {
+  /// The width of the container. If null, uses child's width.
   final double? width;
+
+  /// The height of the container. If null, uses child's height.
   final double? height;
+
+  /// The child widget to display inside the glass container.
   final Widget? child;
+
+  /// The type of glass effect to apply.
   final NeoGlassEffect effect;
+
+  /// The intensity of the effect (0.0 to 1.0 or higher).
   final double intensity;
+
+  /// The accent color used in the effect. Defaults vary by effect type.
   final Color? accentColor;
+
+  /// Internal padding around the child widget.
   final EdgeInsets? padding;
+
+  /// External margin around the container.
   final EdgeInsets? margin;
+
+  /// The border radius of the container in pixels.
   final double borderRadius;
+
+  /// Whether to animate the effect.
   final bool animate;
+
+  /// The duration of one animation cycle.
   final Duration animationDuration;
+
+  /// Custom colors for effects that support color customization.
   final List<Color>? customColors;
 
+  /// Creates a neo glass container with the specified effect.
   const NeoGlassContainer({
     super.key,
     this.width,
@@ -113,8 +152,8 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    Colors.white.withOpacity(0.2 * widget.intensity),
-                    Colors.white.withOpacity(0.05 * widget.intensity),
+                    Colors.white.withValues(alpha:0.2 * widget.intensity),
+                    Colors.white.withValues(alpha:0.05 * widget.intensity),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(widget.borderRadius),
@@ -132,7 +171,7 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
                   ),
                   radius: 1.5,
                   colors: [
-                    (widget.accentColor ?? Colors.blue).withOpacity(0.3),
+                    (widget.accentColor ?? Colors.blue).withValues(alpha:0.3),
                     Colors.transparent,
                   ],
                 ),
@@ -145,7 +184,7 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(widget.borderRadius),
               border: Border.all(
-                color: Colors.white.withOpacity(0.3),
+                color: Colors.white.withValues(alpha:0.3),
                 width: 1.5,
               ),
             ),
@@ -167,7 +206,7 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
             filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.08),
+                color: Colors.white.withValues(alpha:0.08),
                 borderRadius: BorderRadius.circular(widget.borderRadius),
               ),
             ),
@@ -182,11 +221,11 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
                     center: Alignment.center,
                     colors: widget.customColors ??
                         [
-                          Colors.pink.withOpacity(0.3),
-                          Colors.purple.withOpacity(0.3),
-                          Colors.blue.withOpacity(0.3),
-                          Colors.cyan.withOpacity(0.3),
-                          Colors.pink.withOpacity(0.3),
+                          Colors.pink.withValues(alpha:0.3),
+                          Colors.purple.withValues(alpha:0.3),
+                          Colors.blue.withValues(alpha:0.3),
+                          Colors.cyan.withValues(alpha:0.3),
+                          Colors.pink.withValues(alpha:0.3),
                         ],
                   ),
                   borderRadius: BorderRadius.circular(widget.borderRadius),
@@ -199,10 +238,10 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
             filter: ImageFilter.blur(sigmaX: 30, sigmaY: 30),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.05),
+                color: Colors.white.withValues(alpha:0.05),
                 borderRadius: BorderRadius.circular(widget.borderRadius),
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.4),
+                  color: Colors.white.withValues(alpha:0.4),
                   width: 2,
                 ),
               ),
@@ -237,19 +276,19 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
               decoration: BoxDecoration(
                 gradient: RadialGradient(
                   colors: [
-                    Colors.white.withOpacity(0.15),
-                    Colors.white.withOpacity(0.05),
+                    Colors.white.withValues(alpha:0.15),
+                    Colors.white.withValues(alpha:0.05),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(widget.borderRadius),
                 border: Border.all(
-                  color: (widget.accentColor ?? Colors.purple).withOpacity(0.5),
+                  color: (widget.accentColor ?? Colors.purple).withValues(alpha:0.5),
                   width: 2,
                 ),
                 boxShadow: [
                   BoxShadow(
                     color:
-                        (widget.accentColor ?? Colors.purple).withOpacity(0.3),
+                        (widget.accentColor ?? Colors.purple).withValues(alpha:0.3),
                     blurRadius: 30,
                     spreadRadius: 5,
                   ),
@@ -296,14 +335,14 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    Colors.white.withOpacity(0.25),
-                    Colors.white.withOpacity(0.05),
-                    Colors.blue.withOpacity(0.15),
+                    Colors.white.withValues(alpha:0.25),
+                    Colors.white.withValues(alpha:0.05),
+                    Colors.blue.withValues(alpha:0.15),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(widget.borderRadius),
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.5),
+                  color: Colors.white.withValues(alpha:0.5),
                   width: 2,
                 ),
               ),
@@ -346,12 +385,12 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.white.withValues(alpha: 0.3),
-                    Colors.white.withOpacity(0.05),
+                    Colors.white.withValues(alpha:0.05),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(widget.borderRadius),
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.3),
+                  color: Colors.white.withValues(alpha:0.3),
                   width: 1.5,
                 ),
               ),
@@ -386,7 +425,7 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
                         math.sin(_controller.value * 2 * math.pi + i) * 0.3,
                       ),
                       colors: [
-                        Colors.white.withOpacity(0.15 / (i + 1)),
+                        Colors.white.withValues(alpha:0.15 / (i + 1)),
                         Colors.transparent,
                       ],
                     ),
@@ -407,7 +446,7 @@ class _NeoGlassContainerState extends State<NeoGlassContainer>
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(widget.borderRadius),
               border: Border.all(
-                color: (widget.accentColor ?? Colors.cyan).withOpacity(0.5),
+                color: (widget.accentColor ?? Colors.cyan).withValues(alpha:0.5),
                 width: 2,
               ),
             ),

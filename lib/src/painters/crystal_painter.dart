@@ -25,7 +25,7 @@ class CrystalPainter extends CustomPainter {
       final endY =
           size.height / 2 + math.sin(angle + math.pi) * size.height * 0.2;
 
-      paint.color = Colors.white.withOpacity(0.3 * intensity);
+      paint.color = Colors.white.withValues(alpha:0.3 * intensity);
       canvas.drawLine(Offset(startX, startY), Offset(endX, endY), paint);
     }
   }

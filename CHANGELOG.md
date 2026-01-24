@@ -1,18 +1,27 @@
-## 1.0.1 - 2026-01-21
+## 1.0.1+2
+- Improves README formatting and documentation clarity.
+- Optimizes preview images for better pub.dev rendering.
+- Minor internal cleanup with no breaking changes.
 
-### Added
-- Initial release with 6 revolutionary glass effects
-- Liquid Morphism effect with animated gradient
-- Holographic shimmer with rotating rainbow gradient
-- Plasma glow with energetic particles
-- Crystal refraction with diamond facets
-- Aurora borealis wave animation
-- Quantum blur with multi-layer effects
-- Full customization support (intensity, colors, animation)
-- Comprehensive documentation and examples
+## 1.0.1+1
+- Documentation updates and typo fixes.
+- Improves example descriptions.
+- No functional changes.
 
-### Features
-- Zero external dependencies
-- Smooth 60fps animations
-- Responsive design support
-- Easy-to-use API
+## 1.0.1
+- Initial stable public release.
+- Adds 6 unique glassmorphism effects:
+    - Liquid Morphism with animated flowing gradient
+    - Holographic shimmer with rotating rainbow gradient
+    - Plasma glow with energetic particle effects
+    - Crystal refraction with diamond-like facets
+    - Aurora borealis wave animation
+    - Quantum blur with multi-layer blur and particles
+- Full customization support (intensity, colors, animation).
+- Zero external dependencies.
+- Smooth 60fps animations.
+- Responsive design support across platforms.
+
+## 1.0.0
+- Initial development release.
+- Core glass container and base architecture setup.

@@ -87,10 +87,17 @@ NeoGlassContainer(
 ## 📸 Visual Preview
 
 ### All 6 Glass Effects
-![Neo Glass Effects Grid](screenshots/neo_glass_grid.png)
+<img
+src="https://raw.githubusercontent.com/smtechviral/neo_glass/main/screenshots/neo_glass_grid.png"
+width="350"
+/>
 
 ### Detailed Effect Overview
-![Neo Glass Detailed](screenshots/neo_glass_detailed.png)
+<img
+src="https://raw.githubusercontent.com/smtechviral/neo_glass/main/screenshots/neo_glass_detailed.png"
+width="350"
+/>
+
 
 
 ## 🎯 Properties
