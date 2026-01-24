@@ -1,14 +1,5 @@
 # Neo Glass 🌟
 
-## 📘 Complete Example
-
-A full runnable example app is available on GitHub:
-
-👉 **[example/lib/main.dart](https://github.com/smtechviral/neo_glass/blob/main/example/lib/main.dart)**
-
-This example demonstrates all 6 Neo Glass effects with animations and configurations.
-
-
 A revolutionary Flutter package featuring 6 unique glassmorphism effects that don't exist in any other package.
 
 [![pub package](https://img.shields.io/pub/v/neo_glass.svg)](https://pub.dev/packages/neo_glass)
@@ -34,23 +25,6 @@ dependencies:
 Then run:
 ```bash
 flutter pub get
-```
-
-## 📱 Basic Usage
-```dart
-import 'package:flutter/material.dart';
-import 'package:neo_glass/neo_glass.dart';
-
-NeoGlassContainer(
-  effect: NeoGlassEffect.holographic,
-  accentColor: Colors.purple,
-  intensity: 1.2,
-  padding: const EdgeInsets.all(20),
-  child: const Text(
-    'Hello Neo Glass!',
-    style: TextStyle(color: Colors.white, fontSize: 20),
-  ),
-)
 ```
 
 ## 🎨 All Effects Demo
@@ -150,11 +124,7 @@ Contributions, issues, and feature requests are welcome!
 
 This project is [MIT](LICENSE) licensed.
 
-## 👨‍💻 Author
+🙏 Support
+If you like this package, give it a ⭐ on GitHub!
 
-**Your Name**
-- GitHub: [@smtechviral](https://github.com/smtechviral)
-
-## ⭐ Show your support
-
-Give a ⭐️ if this project helped you!
+Made with ❤️ by [@smtechviral](https://github.com/smtechviral)

@@ -4,6 +4,7 @@ version: 1.0.1+2
 homepage: https://github.com/smtechviral/neo_glass
 repository: https://github.com/smtechviral/neo_glass
 issue_tracker: https://github.com/smtechviral/neo_glass/issues
+documentation: https://github.com/smtechviral/neo_glass#readme
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -18,7 +19,10 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^4.0.0
 
+flutter:
+# No assets needed for the package itself
 
+# Screenshots for pub.dev listing
 screenshots:
   - description: 'All 6 glass effects showcase'
     path: screenshots/neo_glass_grid.png
